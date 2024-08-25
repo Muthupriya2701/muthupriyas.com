@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff; /* Set default text color to white */
+    background: url(images/cute.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container for layout */
+.container {
+    flex-direction: row; /* Stack menu on top of content */
+    height: 100vh;
+    width: 100%;
+}
+nav{
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50%;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+    margin: 0 20px;
+    position: relative;
+}
+nav ul li::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5;
+    transition: 0.5s; 
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+}
+
+
+
+/* Main Content Styles */
+.main-content {
+    margin-top: 60px; /* Adjust margin to account for the fixed menu height */
+    padding: 20px;
+    width: 100%;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    width: 200px; /* Increase image size */
+    height: 200px; /* Ensure height matches width for a circular appearance */
+}
+
+.profile-section h1 {
+    color: #fff;
+    margin-top: 20px; /* Ensure text color is white in the profile section */
+}
+.profile-section p {
+    color: #fff;
+    margin-top: 10px; /* Ensure text color is white in the profile section */
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2,
+.about-section p {
+    color: #fff; /* Ensure text color is white in the about section */
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    line-height: 1.6;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="profile-section">
+                <img src="images/iam.jpg" alt="Mutu Priya">
+                <h1>MUTHU PRIYA S</h1>
+                <p>CSE Student at Government College of Engineering, Tirunelveli</p>
+            </div>
+            <div class="about-section">
+                <h2>About Me</h2>
+                <p>Welcome to my about page! I am a Computer Science Engineering student currently studying at the Government College of Engineering in Tirunelveli. I am passionate about technology and programming. Here, you can learn more about my skills and experiences.</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
